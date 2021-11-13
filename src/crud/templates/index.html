@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD Database</title>
 </head>
 <body>
-    CRUD Database
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Location</th>
+            <th>University</th>
+        </tr>
+        {% for data in alldata %}
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.first_name }}</td>
+            <td>{{ data.last_name }}</td>
+            <td>{{ data.email }}</td>
+            <td>{{ data.phone }}</td>
+            <td>{{ data.location }}</td>
+            <td>{{ data.university }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

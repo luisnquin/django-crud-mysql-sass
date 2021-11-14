@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/add-update-formulary/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Mochiy+Pop+One&family=Red+Hat+Mono&family=Roboto:wght@300&family=Source+Sans+Pro:ital@1&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>Formulary</title>
+</head>
+<body>
+    {% if method == 'add' %}
+        <h1>CRUD DATABASE</h1>
+        <h3>Add employee</h3>
+        <form action="{% url 'crud:add-e'%}" method="post">{% csrf_token %}
+            <div class="formulary-items-flex">
+                <label for="firstname">Firstname</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Insert here">
+                <label for="lastname">Lastname</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Insert here">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Insert here">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Insert here">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Insert here">
+                <label for="university">University</label>
+                <input type="text" id="university" name="university" placeholder="Insert here">
+    
+                <input type="submit" value="Save">
+            </div>
+        </form>
+    {% else %}
+        <h1>CRUD DATABASE</h1>
+        <h3>Update employee</h3>
+        <form action="{% url 'crud:update-e' id=id%}" method="post">{% csrf_token %}
+            <div class="formulary-items-flex">
+                <label for="firstname">Firstname</label>
+                <input type="text" id="firstname" name="firstname" value="{{ target.first_name }}"  placeholder="Insert here">
+                <label for="lastname">Lastname</label>
+                <input type="text" id="lastname" name="lastname" value="{{ target.last_name }}" placeholder="Insert here">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" value="{{ target.email }}" placeholder="Insert here">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" value="{{ target.phone }}" placeholder="Insert here">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" value="{{ target.location }}" placeholder="Insert here">
+                <label for="university">University</label>
+                <input type="text" id="university" name="university" value="{{ target.university }}" placeholder="Insert here">
+    
+                <input type="submit" value="Save">
+            </div>
+        </form>
+    {% endif %}
+    <div class="footer">
+        <footer>
+            <h4>
+                Made by: Luis Quiñones Requelme | 14/11/2021
+            </h4>
+        </footer>
+    </div>
+</body>
+</html>

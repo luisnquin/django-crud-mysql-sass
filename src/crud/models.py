@@ -8,7 +8,7 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=30, verbose_name="Firstname")
     last_name = models.CharField(max_length=30, verbose_name="Lastname")
     email = models.EmailField(verbose_name="Email")
-    phone = models.CharField(max_length=10, verbose_name="Phone number")
+    phone = models.CharField(max_length=13, verbose_name="Phone number")
     location = models.CharField(max_length=50, verbose_name="Location")
     university = models.CharField(max_length=50, verbose_name="University")
 

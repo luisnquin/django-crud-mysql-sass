@@ -64,10 +64,9 @@ body .table table tr td .delete:hover {
 }
 body #download-add-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   gap: 2%;
-  position: relative;
-  top: 6px;
+  padding: 10px 0 10px 0;
 }
 body #download-add-flex a {
   text-decoration: none;
@@ -80,6 +79,18 @@ body #download-add-flex #download-csv {
 }
 body #download-add-flex #add-item {
   background: #0c992b;
+}
+body .footer {
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+body .footer footer {
+  margin: 50px 0 0 0;
+  padding: 80px 0 80px 0;
+  background: #1c1c1c;
 }
 
 /*# sourceMappingURL=styles.css.map */

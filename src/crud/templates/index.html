@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index/styles.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Mochiy+Pop+One&family=Red+Hat+Mono&family=Roboto:wght@300&family=Source+Sans+Pro:ital@1&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -14,6 +14,10 @@
 <body>
     <h1>CRUD Database</h1>
     <div class="table">
+        <div id="download-add-flex">
+            <a id="download-csv" href="{% url 'crud:download-csv' %}">Download CSV</a>    
+            <a id="add-item" href="{% url 'crud:formulary' method='add' id=0 %}">Add Item</a>
+        </div>
         <table>
             <tr>
                 <th>ID</th>
@@ -35,15 +39,18 @@
                 <td>{{ data.phone }}</td>
                 <td>{{ data.location }}</td>
                 <td>{{ data.university }}</td>
-                <td><a href="{% url 'crud:update-e' id=data.id %}" class="update">Update</a></td>
+                <td><a href="{% url 'crud:formulary' method='update' id=data.id %}" class="update">Update</a></td>
                 <td><a href="{% url 'crud:delete-e' id=data.id %}" class="delete">Delete</a></td>
             </tr>
             {% endfor %}
         </table>
-        <div id="download-add-flex">
-            <a id="download-csv" href="{% url 'crud:download-csv' %}">Download CSV</a>    
-            <a id="add-item" href="{% url 'crud:add-e' %}">Add Item</a>
-        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <h4>
+                Made by: Luis Quiñones Requelme | 14/11/2021
+            </h4>
+        </footer>
     </div>
 </body>
 </html>

@@ -41,7 +41,7 @@
             {% endfor %}
         </table>
         <div id="download-add-flex">
-            <a id="download-csv" href="#">Download CSV</a>    
+            <a id="download-csv" href="{% url 'crud:download-csv' %}">Download CSV</a>    
             <a id="add-item" href="{% url 'crud:add-e' %}">Add Item</a>
         </div>
     </div>

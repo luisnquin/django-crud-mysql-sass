@@ -20,3 +20,7 @@ def updateEmployee(request, id):
 
 def deleteEmployee(request, id):
     return HttpResponse(f"Delete, your ID is {id}")
+
+
+def downloadCSVFile(request):
+    return HttpResponse("Descargar el CSV eh, excel? Puag")

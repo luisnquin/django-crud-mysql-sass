@@ -35,14 +35,14 @@
                 <td>{{ data.phone }}</td>
                 <td>{{ data.location }}</td>
                 <td>{{ data.university }}</td>
-                <td><a href="#" class="update">Update</a></td>
-                <td><a href="#" class="delete">Delete</a></td>
+                <td><a href="{% url 'crud:update-e' id=data.id %}" class="update">Update</a></td>
+                <td><a href="{% url 'crud:delete-e' id=data.id %}" class="delete">Delete</a></td>
             </tr>
             {% endfor %}
         </table>
         <div id="download-add-flex">
             <a id="download-csv" href="#">Download CSV</a>    
-            <a id="add-item" href="#">Add Item</a>
+            <a id="add-item" href="{% url 'crud:add-e' %}">Add Item</a>
         </div>
     </div>
 </body>

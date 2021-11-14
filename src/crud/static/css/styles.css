@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body .container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

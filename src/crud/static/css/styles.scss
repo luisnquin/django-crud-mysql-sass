@@ -5,12 +5,99 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  .container {
+  h1 {
+    width: 100%;
+    margin: 40px 0 40px 0;
+    text-align: center;
+  }
+
+  .table {
     width: 90%;
     margin: auto;
-    text-align: center;
-    
-    h1 {
+
+    table,
+    #download-add-flex {
+      width: 90%;
+      margin: auto;
+    }
+
+    table,
+    tr,
+    th,
+    td {
+      padding: 5px;
+    }
+
+    table,
+    tr,
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    table {
+      .row-data:hover {
+        background: #e8e8e8;
+      }
+      tr {
+        th {
+          background: #2e2e2e;
+          color: #fff;
+        }
+
+        th,
+        td {
+          text-align: center;
+        }
+      }
+      tr th {
+        font-weight: bolder;
+      }
+
+      tr td {
+        a {
+          text-decoration: none;
+          padding: 2% 6px 2% 6px;
+          color: #fff;
+          border-radius: 5px;
+        }
+
+        .update {
+          background: #c2b330;
+        }
+        .update:hover {
+          background: #d1c76b;
+        }
+        .delete {
+          background: #ba202d;
+        }
+        .delete:hover {
+          background: #bf565f;
+        }
+      }
+    }
+  }
+  #download-add-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+
+    position: relative;
+    top: 6px;
+
+    a {
+      text-decoration: none;
+      padding: 10px 15px 10px 15px;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    #download-csv {
+      background: #274edb;
+    }
+
+    #add-item {
+      background: #0c992b;
     }
   }
 }

@@ -12,8 +12,8 @@
     <title>CRUD Database</title>
 </head>
 <body>
-    <div class="container">
-        <h1>CRUD Database</h1>
+    <h1>CRUD Database</h1>
+    <div class="table">
         <table>
             <tr>
                 <th>ID</th>
@@ -23,9 +23,11 @@
                 <th>Phone</th>
                 <th>Location</th>
                 <th>University</th>
+                <th>Action one</th>
+                <th>Action two</th>
             </tr>
             {% for data in alldata %}
-            <tr>
+            <tr class="row-data">
                 <td>{{ data.id }}</td>
                 <td>{{ data.first_name }}</td>
                 <td>{{ data.last_name }}</td>
@@ -33,9 +35,15 @@
                 <td>{{ data.phone }}</td>
                 <td>{{ data.location }}</td>
                 <td>{{ data.university }}</td>
+                <td><a href="#" class="update">Update</a></td>
+                <td><a href="#" class="delete">Delete</a></td>
             </tr>
             {% endfor %}
         </table>
+        <div id="download-add-flex">
+            <a id="download-csv" href="#">Download CSV</a>    
+            <a id="add-item" href="#">Add Item</a>
+        </div>
     </div>
 </body>
 </html>

@@ -6,10 +6,82 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-body .container {
+body h1 {
+  width: 100%;
+  margin: 40px 0 40px 0;
+  text-align: center;
+}
+body .table {
   width: 90%;
   margin: auto;
+}
+body .table table,
+body .table #download-add-flex {
+  width: 90%;
+  margin: auto;
+}
+body .table table,
+body .table tr,
+body .table th,
+body .table td {
+  padding: 5px;
+}
+body .table table,
+body .table tr,
+body .table th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body .table table .row-data:hover {
+  background: #e8e8e8;
+}
+body .table table tr th {
+  background: #2e2e2e;
+  color: #fff;
+}
+body .table table tr th,
+body .table table tr td {
   text-align: center;
+}
+body .table table tr th {
+  font-weight: bolder;
+}
+body .table table tr td a {
+  text-decoration: none;
+  padding: 2% 6px 2% 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+body .table table tr td .update {
+  background: #c2b330;
+}
+body .table table tr td .update:hover {
+  background: #d1c76b;
+}
+body .table table tr td .delete {
+  background: #ba202d;
+}
+body .table table tr td .delete:hover {
+  background: #bf565f;
+}
+body #download-add-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  position: relative;
+  top: 6px;
+}
+body #download-add-flex a {
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+body #download-add-flex #download-csv {
+  background: #274edb;
+}
+body #download-add-flex #add-item {
+  background: #0c992b;
 }
 
 /*# sourceMappingURL=styles.css.map */
